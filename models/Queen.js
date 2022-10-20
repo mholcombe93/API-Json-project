@@ -7,8 +7,8 @@ let SeasonSchema = new Schema({
 })
  
 let Queen = new Schema({
+  "name": { type: String, required: true },
   "order": {type: Number},
-  "name": {type: String, required: true},
   "winner": {type: Boolean},
   "missCongeniality": {type: Boolean},
   "image_url": {type: String},

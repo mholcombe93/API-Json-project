@@ -13,8 +13,8 @@ const insertData = async () => {
   let structuredQueens = queens.map(queen => {
     let { name, winner, missCongeniality, image_url, quote, seasons } = queen
     return {
-      order: queen.id,
       name,
+      order: queen.id,
       winner,
       missCongeniality,
       image_url,
@@ -22,7 +22,7 @@ const insertData = async () => {
       seasons
     }
   })
-  
+
   await Queen.create(structuredQueens)
 
   //close db connection
