@@ -8,6 +8,8 @@ type http://localhost:3000/queens for a list of 50  drag race queens with their 
 EXAMPLE
   GET a specifc queen by ID
 
+http://localhost:3000/queens/63514ded7dbcf240624eead1
+
   {
     "_id": "63514ded7dbcf240624eead1",
     "order": 21,
@@ -29,10 +31,19 @@ EXAMPLE
       }
     ],
 
+  GET a specifc queen by Name. Start wtih http://localhost:3000/queens/name/ followed by the queen's naem capitlized. Note if there is a space in the name the space should be replaced with "%20" 
+    
+EXAMPLE
+    http://localhost:3000/queens/name/Tatianna 
+
+    http://localhost:3000/queens/name/India%20Ferrah 
+
 By using a third party editor such as Postman, this api allows for the following funtionality:
 
   (get) get all Queens = /
-  (get) get a Queen = /:id
+  (get) get a Queen with _id= /:id
+  (get) get a Queen wtih name = /name/:name
+  (get) get a Queen with order number = /order/:order
   (post) add a Queen = /
   (put) update a Queen = /:id
   (delete) remove a Queen = /:id
@@ -103,3 +114,15 @@ EXAMPLE: Delete a Queen using an Id
 
   DELETE localhost:3000/queens/6351584bab797bcdabd7188a
 
+
+----------
+Added programs:
+
+Chalk
+Cors
+Express
+Mongoose
+Morgan
+Node-fetch
+nodemon
+type-module
