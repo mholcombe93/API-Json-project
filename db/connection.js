@@ -6,7 +6,7 @@ mongoose.set("returnOriginal", false);
 const connectionString = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/DragRaceAPI'
 
 mongoose
-  .connect(connectionString, "mongodb://127.0.0.1:27017/DragRaceAPI")
+  .connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true})
   .catch((err) => {
     console.log(`Error connection go MongoDB: ${err.message}`);
   });
